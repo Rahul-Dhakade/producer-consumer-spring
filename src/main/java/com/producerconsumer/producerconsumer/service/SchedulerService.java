@@ -21,8 +21,8 @@ public class SchedulerService {
         threadPoolTaskExecutor.execute(new Worker1());
     }
 
-
+    @Scheduled(fixedDelay = 8000)
     public void queueProducer(){
-
+        threadPoolTaskExecutor.submit(new Worker2());
     }
 }
